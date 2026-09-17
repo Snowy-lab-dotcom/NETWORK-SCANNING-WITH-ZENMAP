@@ -89,11 +89,11 @@ ipconfig
 
 This command was used to identify:
 
-* IPv4 Address: 10.0.0.10
+* IPv4 Address: 192.168.8.253
 * Subnet Mask: 255.255.255.0
-* Default Gateway: 10.0.0.1
+* Default Gateway: 192.168.8.1
 <br/>
-<img width="1277" height="619" alt="image" src="https://github.com/user-attachments/assets/0c572aac-43be-4d49-b63b-6259ac724c54" />
+<img width="1351" height="758" alt="ipconfig " src="https://github.com/user-attachments/assets/3d5c80ac-3e0b-4689-ac13-3f3879d8556b" />
 
 ---
 
@@ -106,12 +106,12 @@ The local subnet was entered into Zenmap and the **Ping Scan** profile was selec
 ### Scan Configuration
 
 ```text
-Target: 10.0.0.0/24
+Target: 192.168.8.0/24
 Profile: Ping Scan
 ```
 
 ### Zenmap Ping Scan <br/>
-<img width="1289" height="648" alt="image" src="https://github.com/user-attachments/assets/24baa337-9212-437c-b108-edf95d4b9d4a" />
+<img width="1351" height="710" alt="ip ping scan results" src="https://github.com/user-attachments/assets/94c58916-bef2-4a7b-9ebc-b67cef6b120e" />
 
 ---
 
@@ -121,7 +121,7 @@ After completing the Ping Scan, the discovered hosts were 3.
 
 ### 📸 Hosts results
 
-<img width="936" height="299" alt="image" src="https://github.com/user-attachments/assets/7c76402d-a9a0-41b8-9ea4-ca789820072c" />
+<img width="779" height="278" alt="image" src="https://github.com/user-attachments/assets/d9b589c0-7c31-4df5-a3bd-386c793204e0" />
 
 ---
 
@@ -133,9 +133,9 @@ The Zenmap scan results were reviewed to identify the IP addresses of the live h
 
 | # | IP Address | Status  |
 | - | ---------- | ------- |
-| 1 | `10.0.0.1`  | 🟢 Live |
-| 2 | `10.0.0.2`  | 🟢 Live |
-| 3 | `10.0.0.10`  | 🟢 Live |
+| 1 | ` 192.168.8.1`  | 🟢 Live |
+| 2 | ` 192.168.8.254`  | 🟢 Live |
+| 3 | ` 192.168.8.253`  | 🟢 Live |
 
 
 # 🆔 Task 6 – MAC Addresses
@@ -146,9 +146,9 @@ The MAC addresses associated with the discovered hosts were recorded from the av
 
 | # | IP Address | MAC Address         |
 | - | ---------- | ------------------- |
-| 1 | `10.0.0.1`  | `52:54:00:12:35:00` |
-| 2 | `10.0.0.2`  | `08:00:27:5A:87:BC` |
-| 3 | `10.0.0.10`  | `08-00-27-E0-52-44` |
+| 1 | `192.168.8.1`  | `4C:81:25:1E:D3:48` |
+| 2 | `192.168.8.254`  | `72:D0:59:AC:B6:0A` |
+| 3 | `192.168.8.253`  | `AC-D5-64-AA-AD-31` |
 
 For the local Windows machine, the MAC address can also be checked using:
 
@@ -156,7 +156,7 @@ For the local Windows machine, the MAC address can also be checked using:
 ipconfig /all
 ```
 ### Local MAC address
-<img width="1229" height="591" alt="image" src="https://github.com/user-attachments/assets/7b2422d0-1c38-4c3b-ad5b-c8adcd407376" />
+<img width="1084" height="604" alt="image" src="https://github.com/user-attachments/assets/39030c19-5cda-4554-8671-b9f038d2d8ef" />
 
 ---
 
@@ -178,15 +178,13 @@ The project instructions require the topology output to be saved in **PDF format
 6. Save the topology diagram.
  
 ### Network Topology
-<img width="1308" height="652" alt="image" src="https://github.com/user-attachments/assets/435b0e57-19b3-4500-91cb-cb3ed76b050b" />
+<img width="1364" height="711" alt="topology" src="https://github.com/user-attachments/assets/ad74dc32-e892-4494-8014-2c5aef91e49f" />
 
 
 ### 📄 Topology File
 
-The generated PDF will be stored in the project repository:
-
-<img width="1255" height="636" alt="image" src="https://github.com/user-attachments/assets/96f4c1b4-2402-43cd-a878-87eb42cb4bb4" />
-
+The generated PDF is stored in the this repository:
+<img width="959" height="377" alt="image" src="https://github.com/user-attachments/assets/9a68d904-f856-4151-9b4e-fe19332f56b9" />
 
 # 📊 Final Scan Results
 
@@ -194,14 +192,47 @@ Here is results summarised below:
 
 | Information        | Result          |
 | ------------------ | --------------- |
-| Local IPv4 Address | `10.0.0.10`       |
+| Local IPv4 Address | `192.168.8.253`       |
 | Subnet Mask        | `255.255.255.0` |
-| LAN Subnet         | `10.0.0.0/24`    |
-| Default Gateway    | `10.0.0.1`       |
+| LAN Subnet         | `192.168.8.0/24`    |
+| Default Gateway    | ` 192.168.8.1`       |
 | Live Hosts         | `3`             |
 | Scan Type          | Ping Scan       |
 | Scanning Tool      | Zenmap / Nmap   |
 | Topology Generated | Yes             |
+
+---
+# 🛠️ Problems Encountered & Solutions
+During the practical network scanning lab, I encountered a few challenges while identifying the correct network interface, configuring the scan, and interpreting the results.
+
+## 1. Identifying the Correct Network Subnet
+### Problem
+
+When I ran: ipconfig, windows displayed multiple network adapters with different IP addresses. For example: 192.168.56. 1 was shown on one adapter, while the active Wi-Fi connection had:
+
+IPv4 Address: 192.168.8.253
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.8.1
+This initially caused confusion about which network should be scanned using Zenmap.
+
+### Solution
+I reviewed the adapter information and identified the Wi-Fi adapter as the active LAN connection because it had the default gateway: 192.168.8.1.Using the IP address and subnet mask, I determined that the correct network range was: 192.168.8.0/24. I then used this subnet as the target in Zenmap.
+
+## 2. Understanding the VirtualBox Network Adapter
+### Problem
+The IP address: 192.168.56.1 was displayed by Windows even though I was connected to the network through Wi-Fi. This created uncertainty about whether 192.168.56.0/24 or 192.168.8.0/24 was the correct network to scan.
+
+### Solution
+I compared the network adapter information provided by: ipconfig and identified that: 192.168.56.1 belonged to a separate virtual/network adapter. The active Wi-Fi connection was: 192.168.8.253 with: Default Gateway: 192.168.8.1 This helped me understand the difference between a virtual network interface and the physical LAN connection.
+
+## 3. Creating the Network Topology
+### Problem
+After completing the network scan, I needed to present the discovered hosts in a visual format instead of only documenting the IP addresses and scan output.
+
+### Solution
+I used the Topology feature in Zenmap to generate a graphical representation of the discovered network.
+I reviewed the topology, enabled the topology legend where required, and saved the topology diagram as a PDF.
+The PDF was included in the GitHub repository as supporting project evidence.
 
 ---
 
@@ -211,14 +242,15 @@ Through this project, I learned how network discovery can be performed using Zen
 
 Key concepts I practised include:
 
-* Identifying my local IP address.
-* Understanding the relationship between an IP address, subnet mask and LAN subnet.
-* Performing a Ping Scan to discover live hosts.
-* Identifying devices that respond on a local network.
-* Reviewing IP and MAC address information.
-* Using Zenmap's graphical interface to interpret scan results.
-* Creating a visual network topology.
-* Documenting cybersecurity practical work using GitHub.
+* Check all network adapters before selecting a subnet.
+* Identify the active network interface.
+* Use the IP address and subnet mask to determine the correct network range.
+* Do not assume that every IP address shown by ipconfig belongs to the physical LAN.
+* Understand the difference between physical and virtual network adapters.
+* Verify discovered hosts before documenting scan results.
+* Use ipconfig /all when additional network information needs to be confirmed.
+* Save screenshots, scan output, and topology diagrams as evidence of the practical work.
+* Document problems and solutions as part of the troubleshooting process.
   
 ---
 
@@ -247,27 +279,6 @@ Unauthorised scanning of networks or systems can violate organisational policies
 
 * NetworkWalks – Zenmap Network Scanning Practice Lab:
   https://networkwalks.com/zenmap-network-scanning-practice-lab/
-
----
-
-# 👨🏽‍💻 Project Status
-
-**Status:** 🟡 In Progress
-
-### Progress Checklist
-
-* [ ] Install Zenmap
-* [ ] Find local IP address
-* [ ] Identify LAN subnet
-* [ ] Perform Ping Scan
-* [ ] Identify live hosts
-* [ ] Record IP addresses
-* [ ] Record MAC addresses
-* [ ] Generate network topology
-* [ ] Save topology as PDF
-* [ ] Add screenshots
-* [ ] Complete lab questions
-* [ ] Finalise GitHub documentation
 
 ---
 
