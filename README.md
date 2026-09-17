@@ -60,19 +60,20 @@ The first step was to download Zenmap/Nmap from the official Nmap website and in
 
 ### Installation Process
 
-1. Download the Nmap/Zenmap package.
-2. Run the installation file.
-3. Follow the installation wizard.
-4. Complete the installation.
-5. Open Zenmap.
+1. Download the Nmap/Zenmap package.<br/>
+   <img width="965" height="601" alt="nmap setup" src="https://github.com/user-attachments/assets/13e9d295-bcf0-477f-8c58-4477221ce55d" />
 
-### 📸 Screenshot
+3. Run the installation file.<br/>
+   <img width="505" height="387" alt="nmp installing" src="https://github.com/user-attachments/assets/0ad8008f-9614-480a-864e-1a71f0ed7c76" />
 
-Add your installation screenshot here:
+5. Follow the installation wizard.<br/>
+   <img width="500" height="383" alt="nmap install location" src="https://github.com/user-attachments/assets/5a4ee7e8-b71f-4a39-811c-9e03f29dabc2" />
 
-```text
-![Zenmap Installation](screenshots/01-zenmap-installation.png)
-```
+7. Complete the installation.<br/>
+   <img width="527" height="389" alt="nmap agreement" src="https://github.com/user-attachments/assets/8365bc09-c323-4b29-aa79-686bfb234b07" />
+
+9. Open Zenmap.<br/>
+<img width="1302" height="643" alt="image" src="https://github.com/user-attachments/assets/236651bd-deba-46e4-8370-2a05bff8ec61" />
 
 ---
 
@@ -88,25 +89,11 @@ ipconfig
 
 This command was used to identify:
 
-* IPv4 Address
-* Subnet Mask
-* Default Gateway
-
-### Example
-
-```text
-IPv4 Address : 10.0.0.X
-Subnet Mask  : 255.255.255.0
-Gateway      : 10.0.0.1
-```
-
-> Replace the example values above with the actual values from your machine.
-
-### 📸 Screenshot
-
-```text
-![IP Configuration](screenshots/02-ipconfig.png)
-```
+* IPv4 Address: 10.0.0.10
+* Subnet Mask: 255.255.255.0
+* Default Gateway: 10.0.0.1
+<br/>
+<img width="1277" height="619" alt="image" src="https://github.com/user-attachments/assets/0c572aac-43be-4d49-b63b-6259ac724c54" />
 
 ---
 
@@ -119,43 +106,22 @@ The local subnet was entered into Zenmap and the **Ping Scan** profile was selec
 ### Scan Configuration
 
 ```text
-Target: YOUR-LAN-SUBNET
+Target: 10.0.0.0/24
 Profile: Ping Scan
 ```
 
-For example:
-
-```text
-10.0.0.0/24
-```
-
-> The subnet above is only an example. I will use the subnet discovered from my own `ipconfig` results.
-
-### 📸 Screenshot
-
-```text
-![Zenmap Ping Scan](screenshots/03-ping-scan.png)
-```
+### Zenmap Ping Scan <br/>
+<img width="1289" height="648" alt="image" src="https://github.com/user-attachments/assets/24baa337-9212-437c-b108-edf95d4b9d4a" />
 
 ---
 
 # 🖥️ Task 4 – Number of Live Hosts
 
-After completing the Ping Scan, the discovered hosts were counted.
+After completing the Ping Scan, the discovered hosts were 3.
 
-### Result
+### 📸 Hosts results
 
-```text
-Number of live hosts: X
-```
-
-> **Note:** The number of hosts will depend on the network being scanned.
-
-### 📸 Screenshot
-
-```text
-![Live Hosts](screenshots/04-live-hosts.png)
-```
+<img width="936" height="299" alt="image" src="https://github.com/user-attachments/assets/7c76402d-a9a0-41b8-9ea4-ca789820072c" />
 
 ---
 
@@ -167,20 +133,10 @@ The Zenmap scan results were reviewed to identify the IP addresses of the live h
 
 | # | IP Address | Status  |
 | - | ---------- | ------- |
-| 1 | `X.X.X.X`  | 🟢 Live |
-| 2 | `X.X.X.X`  | 🟢 Live |
-| 3 | `X.X.X.X`  | 🟢 Live |
-| 4 | `X.X.X.X`  | 🟢 Live |
+| 1 | `10.0.0.1`  | 🟢 Live |
+| 2 | `10.0.0.2`  | 🟢 Live |
+| 3 | `10.0.0.10`  | 🟢 Live |
 
-> The addresses above will be replaced with the actual results from my scan.
-
-### 📸 Screenshot
-
-```text
-![Live Host IP Addresses](screenshots/05-host-ip-addresses.png)
-```
-
----
 
 # 🆔 Task 6 – MAC Addresses
 
@@ -190,24 +146,17 @@ The MAC addresses associated with the discovered hosts were recorded from the av
 
 | # | IP Address | MAC Address         |
 | - | ---------- | ------------------- |
-| 1 | `X.X.X.X`  | `XX:XX:XX:XX:XX:XX` |
-| 2 | `X.X.X.X`  | `XX:XX:XX:XX:XX:XX` |
-| 3 | `X.X.X.X`  | `XX:XX:XX:XX:XX:XX` |
-| 4 | `X.X.X.X`  | `XX:XX:XX:XX:XX:XX` |
+| 1 | `10.0.0.1`  | `52:54:00:12:35:00` |
+| 2 | `10.0.0.2`  | `08:00:27:5A:87:BC` |
+| 3 | `10.0.0.10`  | `08-00-27-E0-52-44` |
 
 For the local Windows machine, the MAC address can also be checked using:
 
 ```cmd
 ipconfig /all
 ```
-
-The project instructions specifically mention using `ipconfig /all` to find the local MAC address.
-
-### 📸 Screenshot
-
-```text
-![MAC Addresses](screenshots/06-mac-addresses.png)
-```
+### Local MAC address
+<img width="1229" height="591" alt="image" src="https://github.com/user-attachments/assets/7b2422d0-1c38-4c3b-ad5b-c8adcd407376" />
 
 ---
 
@@ -227,64 +176,32 @@ The project instructions require the topology output to be saved in **PDF format
 4. Select **Save Graphic**.
 5. Select **PDF**.
 6. Save the topology diagram.
+ 
+### Network Topology
+<img width="1308" height="652" alt="image" src="https://github.com/user-attachments/assets/435b0e57-19b3-4500-91cb-cb3ed76b050b" />
 
-### 📸 Screenshot
-
-```text
-![Network Topology](screenshots/07-network-topology.png)
-```
 
 ### 📄 Topology File
 
 The generated PDF will be stored in the project repository:
 
-```text
-results/network-topology.pdf
-```
+<img width="1255" height="636" alt="image" src="https://github.com/user-attachments/assets/96f4c1b4-2402-43cd-a878-87eb42cb4bb4" />
 
----
 
 # 📊 Final Scan Results
 
-Once the practical scan is completed, the results will be summarised below.
+Here is results summarised below:
 
 | Information        | Result          |
 | ------------------ | --------------- |
-| Local IPv4 Address | `X.X.X.X`       |
+| Local IPv4 Address | `10.0.0.10`       |
 | Subnet Mask        | `255.255.255.0` |
-| LAN Subnet         | `X.X.X.0/24`    |
-| Default Gateway    | `X.X.X.X`       |
-| Live Hosts         | `X`             |
+| LAN Subnet         | `10.0.0.0/24`    |
+| Default Gateway    | `10.0.0.1`       |
+| Live Hosts         | `3`             |
 | Scan Type          | Ping Scan       |
 | Scanning Tool      | Zenmap / Nmap   |
 | Topology Generated | Yes             |
-
----
-
-# 📁 Repository Structure
-
-The repository will be organised as follows:
-
-```text
-Network-Scanning-with-Zenmap/
-│
-├── README.md
-│
-├── screenshots/
-│   ├── 01-zenmap-installation.png
-│   ├── 02-ipconfig.png
-│   ├── 03-ping-scan.png
-│   ├── 04-live-hosts.png
-│   ├── 05-host-ip-addresses.png
-│   ├── 06-mac-addresses.png
-│   └── 07-network-topology.png
-│
-├── results/
-│   └── network-topology.pdf
-│
-└── notes/
-    └── lab-notes.md
-```
 
 ---
 
@@ -302,7 +219,7 @@ Key concepts I practised include:
 * Using Zenmap's graphical interface to interpret scan results.
 * Creating a visual network topology.
 * Documenting cybersecurity practical work using GitHub.
-
+  
 ---
 
 # 🔐 Ethical & Security Considerations
