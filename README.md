@@ -13,8 +13,6 @@ The purpose of this lab is to understand how a cybersecurity professional can id
 
 This project was completed as part of my practical cybersecurity and ethical hacking learning journey.
 
-> ⚠️ **Ethical Use:** Network scanning should only be performed on networks and systems that you own or have explicit permission to test.
-
 ---
 
 ## 🎯 Project Objectives
@@ -31,8 +29,6 @@ The main objectives of this project are to:
 * Generate and save a network topology diagram as a PDF.
 * Problems encoutered.
 * Document the practical results and lessons learned.
-
-The project instructions specifically use a `10.0.0.0/24` subnet.
 
 ---
 
@@ -73,7 +69,8 @@ The first step was to download Zenmap/Nmap from the official Nmap website and in
    <img width="527" height="389" alt="nmap agreement" src="https://github.com/user-attachments/assets/8365bc09-c323-4b29-aa79-686bfb234b07" />
 
 9. Open Zenmap.<br/>
-<img width="1302" height="643" alt="image" src="https://github.com/user-attachments/assets/236651bd-deba-46e4-8370-2a05bff8ec61" />
+<img width="1340" height="720" alt="image" src="https://github.com/user-attachments/assets/ccbe28e0-ffb9-41fe-86bd-b3f155a31617" />
+
 
 ---
 
