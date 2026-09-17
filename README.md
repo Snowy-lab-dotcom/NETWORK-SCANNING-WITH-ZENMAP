@@ -277,15 +277,12 @@ Unauthorised scanning of networks or systems can violate organisational policies
 * Nmap official website:
   https://nmap.org/
 
-* NetworkWalks – Zenmap Network Scanning Practice Lab:
-  https://networkwalks.com/zenmap-network-scanning-practice-lab/
-
 ---
+## 👤 Author
+Malehloa Seroke
+Cybersecurity Professional B082
 
-## 🚀 Conclusion
+LinkedIn: [www.linkedin.com/in/malehloa-seroke]
 
-This project provides practical exposure to **network discovery and scanning**, which are important activities in cybersecurity and ethical hacking.
-
-The lab demonstrates how Zenmap can be used to discover live hosts within a local subnet and present the results in both textual and graphical formats.
-
-**Project completed as part of my cybersecurity practical learning journey.**
+## 📌 Project Information
+Program Name: Cybersecurity at Networkwalks | Week: 02 | Project: Zenmap Network Scanning Practice Lab: | Repository: GitHub
